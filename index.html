@@ -1,16 +1,168 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bullying Na Escola</title>
-    </head>
-    <body>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola Sem Bullying | Programa de Conscientização e Prevenção</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <h1>Bullying Na Escola</h1>
-        <p>Objetivo: Sensibilizar e conscientizar sobre os riscos do bullying escolar, fornecendo 
-        informações acessíveis e estratégias de prevenção para alunos, famílias e escolas.</p>
-        <p>Só Deus na causa do 2C</p>
-            </body>
+    <!-- Acessibilidade e Topbar -->
+    <header class="topbar">
+        <div class="container topbar-wrapper">
+            <div class="logo">
+                <span class="logo-icon">🛡️</span>
+                <span class="logo-text">Escola<strong>Segura</strong></span>
+            </div>
+            <div class="accessibility-controls" aria-label="Controles de Acessibilidade">
+                <button id="btn-decrease" title="Diminuir fonte" aria-label="Diminuir fonte">A-</button>
+                <button id="btn-increase" title="Aumentar fonte" aria-label="Aumentar fonte">A+</button>
+                <button id="btn-contrast" title="Alternar Alto Contraste" aria-label="Alternar Alto Contraste">Alto Contraste</button>
+            </div>
+        </div>
+    </header>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="badge">Programa Educacional Certificado</span>
+                <h1>Transforme sua escola em um ambiente seguro, acolhedor e livre de bullying.</h1>
+                <p>Implementamos metodologias ativas de prevenção, diagnóstico de clima escolar e capacitação contínua para alunos, educadores e famílias.</p>
+                <div class="hero-actions">
+                    <a href="#contato" class="btn btn-primary">Implementar na Minha Escola</a>
+                    <a href="#sobre" class="btn btn-secondary">Conhecer o Programa</a>
+                </div>
+            </div>
+            <div class="hero-card">
+                <div class="stat-box">
+                    <span class="stat-number">+85%</span>
+                    <span class="stat-label">Redução de incidentes de intimidação nas escolas parceiras</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">+120 mil</span>
+                    <span class="stat-label">Alunos impactados diretamente com nossas oficinas</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Conformidade com a Lei Antibullying (Lei nº 13.185)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilares do Programa -->
+    <section id="sobre" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Como Combatemos o Bullying na Prática</h2>
+                <p>Uma abordagem 360° voltada para a criação de empatia, cultura de paz e resolução de conflitos.</p>
+            </div>
+            <div class="features-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Diagnóstico de Clima Escolar</h3>
+                    <p>Mapeamento confidencial de episódios de bullying e cyberbullying para identificar pontos críticos e dinâmicas sociais da instituição.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">👩‍🏫</div>
+                    <h3>Capacitação Docente</h3>
+                    <p>Treinamento prático para professores e gestores identificarem sinais silenciosos de sofrimento e agirem com eficiência pedagógica.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Oficinas de Empatia para Alunos</h3>
+                    <p>Dinâmicas socioemocionais em sala de aula focadas no respeito às diferenças, fortalecimento do pertencimento e prevenção da violência.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🏛️</div>
+                    <h3>Canais Seguros de Denúncia</h3>
+                    <p>Implantação de protocolos institucionais e canais anônimos para mediação de conflitos sem exposição das vítimas.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos (Renderizado via JS) -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Resultados Reais nas Comunidades Escolares</h2>
+                <p>Veja o depoimento de gestores e educadores que transformaram o ambiente escolar conosco.</p>
+            </div>
+            <div class="carousel-wrapper">
+                <button id="carousel-prev" class="carousel-btn" aria-label="Anterior">❮</button>
+                <div id="carousel-container" class="carousel-content">
+                    <!-- Injetado dinamicamente via JS -->
+                </div>
+                <button id="carousel-next" class="carousel-btn" aria-label="Próximo">❯</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ (Renderizado via JS) -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Dúvidas Frequentes</h2>
+                <p>Esclareça suas dúvidas sobre a implementação do programa antibullying.</p>
+            </div>
+            <div id="accordion-container" class="accordion-list">
+                <!-- Injetado dinamicamente via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário CTA / Contato -->
+    <section id="contato" class="cta-section">
+        <div class="container">
+            <div class="cta-box">
+                <div class="cta-text">
+                    <h2>Proteja a Saúde Mental e o Futuro dos seus Alunos</h2>
+                    <p>Solicite uma apresentação completa do Programa Escola Segura e receba um diagnóstico prévio para sua instituição de ensino.</p>
+                </div>
+                <form id="lead-form" class="cta-form" onsubmit="event.preventDefault(); alert('Solicitação enviada com sucesso! Nossos especialistas entrarão em contato.');">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" required placeholder="Ex: Profa. Maria Silva">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail Institucional</label>
+                        <input type="email" id="email" required placeholder="maria@escola.com.br">
+                    </div>
+                    <div class="form-group">
+                        <label for="escola">Nome da Escola / Instituição</label>
+                        <input type="text" id="escola" required placeholder="Colégio Exemplo">
+                    </div>
+                    <div class="form-group">
+                        <label for="cargo">Seu Cargo</label>
+                        <select id="cargo" required>
+                            <option value="">Selecione...</option>
+                            <option value="diretor">Diretor(a) / Gestor(a)</option>
+                            <option value="coordenador">Coordenador(a) Pedagógico(a)</option>
+                            <option value="psicologo">Psicólogo(a) Escolar</option>
+                            <option value="professor">Professor(a)</option>
+                            <option value="outro">Pai / Mãe / Outro</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Agendar Reunião Diagnóstica</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-wrapper">
+            <p>&copy; 2026 Escola Segura. Todos os direitos reservados. Projeto em conformidade com a Lei nº 13.185/2015.</p>
+            <p>Compromisso com a cultura de paz e bem-estar nas escolas.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
