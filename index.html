@@ -1,10 +1,9 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
-    <title>Escola Segura | Conscientização e Combate ao Bullying</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola Segura | Juntos Contra o Bullying</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -16,226 +15,229 @@
     <div class="top-accessibility" aria-label="Controles de Acessibilidade">
         <div class="container accessibility-flex">
             <span>Acessibilidade:</span>
-            <div class="btn-group">
-                <button id="btn-increase-font" aria-label="Aumentar fonte">A+</button>
-                <button id="btn-decrease-font" aria-label="Diminuir fonte">A-</button>
-                <button id="btn-contrast" aria-label="Alternar alto contraste">Alto Contraste</button>
+            <div class="acc-buttons">
+                <button id="btn-decrease-font" title="Diminuir Fonte">A-</button>
+                <button id="btn-increase-font" title="Aumentar Fonte">A+</button>
+                <button id="btn-toggle-contrast" title="Alternar Alto Contraste">Alto Contraste</button>
             </div>
         </div>
     </div>
 
-    <!-- Navegação -->
+    <!-- Cabeçalho Principal -->
     <header class="header">
         <div class="container header-flex">
             <a href="#" class="logo">Escola<span>Segura</span></a>
             <nav class="nav-menu">
-                <a href="#pilares">Pilares</a>
-                <a href="#abas-tipos">Tipos de Bullying</a>
+                <a href="#hero">Início</a>
+                <a href="#abas">Conteúdo</a>
                 <a href="#depoimentos">Depoimentos</a>
-                <a href="#faq">Perguntas Frequentes</a>
+                <a href="#faq">Dúvidas</a>
             </nav>
-            <a href="#contato" class="btn btn-primary nav-cta">Solicitar Programa</a>
+            <a href="#contato" class="btn btn-primary">Pedir Ajuda / Denunciar</a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="hero" class="hero-section">
         <div class="container hero-grid">
-            <div class="hero-content">
+            <div class="hero-text">
                 <span class="badge">Ambiente Escolar Saudável</span>
-                <h1>Transforme sua escola em um espaço livre de intimidação e medo</h1>
-                <p>Implemente a metodologia definitiva de conscientização, diagnóstico e mediação contra o bullying e cyberbullying. Proteja o desenvolvimento emocional dos seus alunos.</p>
+                <h1>Transforme a escola em um lugar seguro, acolhedor e livre de bullying.</h1>
+                <p>Capacitamos alunos, pais e educadores com ferramentas práticas e suporte especializado para identificar, combater e prevenir o bullying e o cyberbullying.</p>
                 <div class="hero-actions">
-                    <a href="#contato" class="btn btn-primary btn-large">Implementar na Minha Escola</a>
-                    <a href="#abas-tipos" class="btn btn-secondary btn-large">Saiba Como Identificar</a>
-                </div>
-                <div class="hero-trust">
-                    <p><strong>+150 escolas</strong> atendidas e mais de <strong>45.000 alunos</strong> impactados com segurança e empatia.</p>
+                    <a href="#abas" class="btn btn-primary">Conhecer o Programa</a>
+                    <a href="#contato" class="btn btn-secondary">Solicitar Palestra</a>
                 </div>
             </div>
-            <div class="hero-card-visual">
-                <div class="stat-card">
-                    <span class="stat-number">80%</span>
-                    <span class="stat-text">Redução de episódios de intimidação em escolas parceiras no 1º semestre.</span>
+            <div class="hero-card">
+                <h3>Canais de Apoio Rápido</h3>
+                <p>Você não está sozinho. Se estiver passando por uma situação difícil, busque ajuda imediata.</p>
+                <ul class="support-list">
+                    <li><strong>Ligação Gratuita:</strong> Disque 100 (Direitos Humanos)</li>
+                    <li><strong>CVV (Apoio Emocional):</strong> Ligue 188</li>
+                    <li><strong>Atendimento Escolar:</strong> Apoio psicopedagógico online</li>
+                </ul>
+                <a href="#contato" class="btn btn-block btn-primary">Falar com Especialista</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Abas Conteudísticas -->
+    <section id="abas" class="tabs-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Guia Completo de Enfrentamento</h2>
+                <p>Navegue pelas abas abaixo para entender como agir em cada linha de frente.</p>
+            </div>
+
+            <div class="tab-buttons" role="tablist">
+                <button class="tab-btn active" data-tab="tab-alunos" role="tab" aria-selected="true">Para Alunos</button>
+                <button class="tab-btn" data-tab="tab-pais" role="tab" aria-selected="false">Para Pais e Responsáveis</button>
+                <button class="tab-btn" data-tab="tab-educadores" role="tab" aria-selected="false">Para Educadores</button>
+                <button class="tab-btn" data-tab="tab-cyber" role="tab" aria-selected="false">Cyberbullying</button>
+            </div>
+
+            <div class="tab-contents">
+                <!-- Aba 1 -->
+                <div id="tab-alunos" class="tab-content active" role="tabpanel">
+                    <h3>O que fazer se você estiver sofrendo ou presenciando bullying?</h3>
+                    <p>Sua voz tem poder. Ignorar o comportamento do agressor ou guardar segredo apenas prolonga o sofrimento.</p>
+                    <div class="grid-3">
+                        <div class="info-card">
+                            <h4>1. Rompa o Silêncio</h4>
+                            <p>Conte imediatamente para um adulto de confiança: pais, professores, orientadores ou diretores.</p>
+                        </div>
+                        <div class="info-card">
+                            <h4>2. Não Reaja com Violência</h4>
+                            <p>Mantenha a calma, afaste-se da situação e busque o auxílio de autoridades escolares.</p>
+                        </div>
+                        <div class="info-card">
+                            <h4>3. Seja um Aliado</h4>
+                            <p>Se vir alguém sendo intimidado, apoie a vítima. Não ria, não compartilhe e ajude a denunciar.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-card highlight">
-                    <span class="stat-number">100%</span>
-                    <span class="stat-text">Adequado às diretrizes da Lei nº 13.185 (Programa de Combate à Intimidação Sistemática).</span>
+
+                <!-- Aba 2 -->
+                <div id="tab-pais" class="tab-content" role="tabpanel">
+                    <h3>Como identificar os sinais em casa?</h3>
+                    <p>Mudanças repentinas de comportamento são os principais alertas de que a criança ou adolescente precisa de ajuda.</p>
+                    <div class="grid-3">
+                        <div class="info-card">
+                            <h4>Sinais Comportamentais</h4>
+                            <p>Queda no rendimento escolar, isolamento social, recusa em ir à escola e pesadelos frequentes.</p>
+                        </div>
+                        <div class="info-card">
+                            <h4>Sinais Físicos e Materiais</h4>
+                            <p>Roupas rasgadas, materiais escolares danificados sem explicação ou contusões físicas.</p>
+                        </div>
+                        <div class="info-card">
+                            <h4>Ação Recomendada</h4>
+                            <p>Escute sem julgar, documente relatos e agende uma conversa imediata com a direção da escola.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aba 3 -->
+                <div id="tab-educadores" class="tab-content" role="tabpanel">
+                    <h3>Estratégias para uma Escola Protegida</h3>
+                    <p>A prevenção ativa e a mediação contínua são os pilares para erradicar a cultura do medo no ambiente escolar.</p>
+                    <div class="grid-3">
+                        <div class="info-card">
+                            <h4>Mapeamento Preventivo</h4>
+                            <p>Identifique áreas críticas e momentos de menor supervisão onde agressões costumam ocorrer.</p>
+                        </div>
+                        <div class="info-card">
+                            <h4>Cultura de Respeito</h4>
+                            <p>Incorpore atividades socioemocionais no currículo, promovendo empatia e cooperação.</p>
+                        </div>
+                        <div class="info-card">
+                            <h4>Protocolo de Intervenção</h4>
+                            <p>Aplique medidas corretivas pedagógicas, acolha a vítima e envolva as famílias de forma construtiva.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aba 4 -->
+                <div id="tab-cyber" class="tab-content" role="tabpanel">
+                    <h3>Proteção no Ambiente Digital</h3>
+                    <p>A violência virtual não para no sinal da escola. Saiba como agir diante de ataques nas redes sociais.</p>
+                    <div class="grid-3">
+                        <div class="info-card">
+                            <h4>Guarde as Evidências</h4>
+                            <p>Tire capturas de tela (prints) de mensagens, links, imagens e horários dos ataques digitais.</p>
+                        </div>
+                        <div class="info-card">
+                            <h4>Bloqueie e Denuncie</h4>
+                            <p>Utilize as ferramentas de bloqueio e denúncia das próprias plataformas e redes sociais.</p>
+                        </div>
+                        <div class="info-card">
+                            <h4>Assistência Jurídica</h4>
+                            <p>Cyberbullying é crime. Casos graves devem ser registrados em delegacias de crimes cibernéticos.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pilares do Programa -->
-    <section id="pilares" class="section bg-light">
+    <!-- Seção do Carrossel de Depoimentos (Renderizado via JS) -->
+    <section id="depoimentos" class="carousel-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Como Atuamos na Prevenção do Bullying</h2>
-                <p>Uma abordagem integrada que envolve gestão, professores, alunos e famílias.</p>
+            <div class="section-title">
+                <h2>Histórias de Transformaçao</h2>
+                <p>Veja como comunidades escolares mudaram a sua realidade com diálogo e prevenção.</p>
             </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🛡️</div>
-                    <h3>Diagnóstico e Protocolo</h3>
-                    <p>Mapeamento anônimo do clima escolar e criação de fluxos claros para denúncia, acolhimento e resolução de conflitos.</p>
+            <div class="carousel-wrapper">
+                <button class="carousel-control prev" id="btn-prev" aria-label="Depoimento Anterior">&#10094;</button>
+                <div id="carousel-container" class="carousel-container">
+                    <!-- Injetado dinamicamente via JS -->
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎓</div>
-                    <h3>Capacitação Docente</h3>
-                    <p>Treinamentos práticos para educadores identificarem sinais sutis de sofrimento psíquico e agirem preventivamente.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🤝</div>
-                    <h3>Oficinas de Empatia</h3>
-                    <p>Dinâmicas socioemocionais para conscientizar os estudantes sobre respeito às diferenças e cultura de paz.</p>
-                </div>
+                <button class="carousel-control next" id="btn-next" aria-label="Próximo Depoimento">&#10095;</button>
             </div>
         </div>
     </section>
 
-    <!-- Seção de Abas Interativas: Tipos de Bullying -->
-    <section id="abas-tipos" class="section">
+    <!-- Seção FAQ Acordeão (Renderizado via JS) -->
+    <section id="faq" class="faq-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Compreenda as Variadas Formas de Bullying</h2>
-                <p>O primeiro passo para o combate é a identificação precisa das condutas agressivas.</p>
-            </div>
-
-            <div class="tabs-wrapper">
-                <div class="tabs-header" role="tablist">
-                    <button class="tab-btn active" data-tab="tab-1" role="tab" aria-selected="true">Bullying Verbal</button>
-                    <button class="tab-btn" data-tab="tab-2" role="tab" aria-selected="false">Bullying Físico</button>
-                    <button class="tab-btn" data-tab="tab-3" role="tab" aria-selected="false">Cyberbullying</button>
-                    <button class="tab-btn" data-tab="tab-4" role="tab" aria-selected="false">Bullying Social</button>
-                </div>
-
-                <div class="tabs-content">
-                    <div id="tab-1" class="tab-panel active" role="tabpanel">
-                        <h3>Bullying Verbal e Psicológico</h3>
-                        <p>Insultos, apelidos pejorativos, piadas ofensivas recorrentes e ameaças sutis ou explícitas.</p>
-                        <ul>
-                            <li><strong>Sinais de alerta:</strong> Mudança repentina no vocabulário, isolamento no recreio, queda de rendimento escolar.</li>
-                            <li><strong>Impacto:</strong> Danos severos à autoimagem, ansiedade social e depressão infantil.</li>
-                        </ul>
-                    </div>
-
-                    <div id="tab-2" class="tab-panel" role="tabpanel">
-                        <h3>Bullying Físico e Material</h3>
-                        <p>Agressões corporais, empurrões, beliscões, bem como o furto, ocultação ou destruição de pertences da vítima.</p>
-                        <ul>
-                            <li><strong>Sinais de alerta:</strong> Roupas rasgadas, materiais escolares danificados, hematomas sem explicação clara.</li>
-                            <li><strong>Impacto:</strong> Sensação constante de insegurança e recusa sistemática em ir à escola.</li>
-                        </ul>
-                    </div>
-
-                    <div id="tab-3" class="tab-panel" role="tabpanel">
-                        <h3>Cyberbullying (Ambiente Digital)</h3>
-                        <p>Humilhações, disseminação de falsos boatos, exclusão de grupos e vazamento de fotos/mensagens privadas em redes sociais e aplicativos.</p>
-                        <ul>
-                            <li><strong>Sinais de alerta:</strong> Uso compulsivo ou esquiva total do celular/computador, agitação ao receber notificações.</li>
-                            <li><strong>Impacto:</strong> Agressão ininterrupta (24 horas por dia), sem ambiente de refúgio para o jovem.</li>
-                        </ul>
-                    </div>
-
-                    <div id="tab-4" class="tab-panel" role="tabpanel">
-                        <h3>Bullying Social e Relacional</h3>
-                        <p>Exclusão proposital de atividades em grupo, espalhar rumores danosos e incentivar outros alunos a ignorarem a vítima.</p>
-                        <ul>
-                            <li><strong>Sinais de alerta:</strong> Aluno sempre sozinho em trabalhos de equipe, ausência de convites para eventos sociais.</li>
-                            <li><strong>Impacto:</strong> Sentimento profundo de rejeição, baixa autoestima e sensação de invisibilidade.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Carrossel de Depoimentos (Renderizado via JS) -->
-    <section id="depoimentos" class="section bg-light">
-        <div class="container">
-            <div class="section-header">
-                <h2>Resultados Reais nas Instituições de Ensino</h2>
-                <p>Veja o depoimento de gestores e educadores que transformaram o clima escolar.</p>
-            </div>
-
-            <div class="carousel-container">
-                <div class="carousel-track" id="carousel-track">
-                    <!-- Inserido dinamicamente via JS -->
-                </div>
-                <div class="carousel-controls">
-                    <button id="prev-btn" aria-label="Depoimento Anterior">← Anterior</button>
-                    <button id="next-btn" aria-label="Próximo Depoimento">Próximo →</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Perguntas Frequentes / Acordeão (Renderizado via JS) -->
-    <section id="faq" class="section">
-        <div class="container">
-            <div class="section-header">
+            <div class="section-title">
                 <h2>Perguntas Frequentes</h2>
-                <p>Dúvidas comuns de gestores escolares e pais sobre o projeto e a legislação.</p>
+                <p>Esclareça as dúvidas mais comuns sobre legislação, identificação e intervenção.</p>
             </div>
-
-            <div class="accordion" id="accordion-container">
-                <!-- Inserido dinamicamente via JS -->
+            <div id="accordion-container" class="accordion-container">
+                <!-- Injetado dinamicamente via JS -->
             </div>
         </div>
     </section>
 
-    <!-- Formulário de Contato / Conversão -->
-    <section id="contato" class="section bg-primary text-white">
-        <div class="container grid-form">
-            <div class="form-info">
-                <h2>Traga o Programa Escola Segura para sua Instituição</h2>
-                <p>Nossa equipe de psicopedagogos e especialistas em direito educacional está pronta para desenhar um plano sob medida para sua escola.</p>
-                <div class="info-list">
-                    <p>✓ Atendimento de acordo com a Lei 13.185/2015</p>
-                    <p>✓ Material pedagógico exclusivo para alunos e professores</p>
-                    <p>✓ Suporte contínuo para mediação de casos complexos</p>
+    <!-- Formulário de Contato / Denúncia Segura -->
+    <section id="contato" class="contact-section">
+        <div class="container contact-grid">
+            <div class="contact-info">
+                <h2>Envie uma mensagem ou solicite auxílio</h2>
+                <p>Sua comunicação pode ser feita de forma anônima. Garantimos total sigilo e encaminhamento rápido aos responsáveis pedagógicos.</p>
+                <div class="badge-box">
+                    <strong>Atendimento Sigiloso & Seguro</strong>
+                    <p>Resposta prioritária para casos urgentes dentro de 24 horas.</p>
                 </div>
             </div>
-            <div class="form-wrapper">
-                <form id="contact-form" onsubmit="event.preventDefault(); alert('Obrigado! Nossa equipe entrará em contato em breve.');">
-                    <div class="form-group">
-                        <label for="nome">Nome Completo</label>
-                        <input type="text" id="nome" required placeholder="Digite seu nome">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-mail Profissional</label>
-                        <input type="email" id="email" required placeholder="seuemail@escola.com.br">
-                    </div>
-                    <div class="form-group">
-                        <label for="cargo">Seu Cargo / Função</label>
-                        <select id="cargo" required>
-                            <option value="">Selecione...</option>
-                            <option value="diretor">Diretor(a) / Mantenedor(a)</option>
-                            <option value="coordenador">Coordenador(a) Pedagógico(a)</option>
-                            <option value="psicologo">Psicólogo(a) Escolar</option>
-                            <option value="professor">Professor(a)</option>
-                            <option value="pai">Pai, Mãe ou Responsável</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="escola">Nome da Escola / Instituição</label>
-                        <input type="text" id="escola" required placeholder="Nome da instituição">
-                    </div>
-                    <button type="submit" class="btn btn-dark btn-block">Solicitar Proposta Gratuita</button>
-                </form>
-            </div>
+            <form class="contact-form" id="main-form">
+                <div class="form-group">
+                    <label for="nome">Nome Completo (Opcional)</label>
+                    <input type="text" id="nome" placeholder="Seu nome ou Mantenha Anônimo">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail ou Telefone de Contato</label>
+                    <input type="text" id="email" required placeholder="Seu e-mail ou WhatsApp">
+                </div>
+                <div class="form-group">
+                    <label for="perfil">Você é:</label>
+                    <select id="perfil" required>
+                        <option value="">Selecione...</option>
+                        <option value="aluno">Aluno(a)</option>
+                        <option value="pai">Pai / Mãe / Responsável</option>
+                        <option value="educador">Educador / Gestor</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Detalhes da Situação ou Solicitação</label>
+                    <textarea id="mensagem" rows="4" required placeholder="Descreva como podemos ajudar..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Enviar Comunicação com Segurança</button>
+            </form>
         </div>
     </section>
 
     <!-- Rodapé -->
     <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-brand">
-                <a href="#" class="logo text-white">Escola<span>Segura</span></a>
-                <p>Promovendo a cultura da paz e a empatia no ambiente educacional.</p>
-            </div>
-            <div class="footer-copy">
-                <p>&copy; 2026 Escola Segura. Todos os direitos reservados. Projeto alinhado à Lei de Combate ao Bullying.</p>
+        <div class="container footer-flex">
+            <p>&copy; 2026 Escola Segura. Todos os direitos reservados. Projeto de Conscientização Social.</p>
+            <div class="footer-links">
+                <a href="#hero">Início</a>
+                <a href="#abas">Guia</a>
+                <a href="#faq">FAQ</a>
             </div>
         </div>
     </footer>
